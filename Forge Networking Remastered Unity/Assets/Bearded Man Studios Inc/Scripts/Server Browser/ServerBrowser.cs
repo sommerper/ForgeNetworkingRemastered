@@ -115,7 +115,7 @@ namespace BeardedManStudios.Forge.Networking.Unity
 										socket = new TCPClient();
 										((TCPClient)socket).Connect(address, port);
 									}
-									#if !UNITY_IOS && !UNITY_ANDROID
+									#if UNITY_WEBGL
 									else if (protocol == "web")
 									{
 										socket = new TCPClientWebsockets();
